@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>FocusYT</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="research-layout">
+    <aside class="sidebar">
+      <h3>
+        Your folders
+        <a href="index.html" class="sidebar-search-btn" title="Home / new search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </a>
+      </h3>
+      <ul id="folder-nav"></ul>
+      <button id="new-folder-btn" class="new-folder-link">+ new folder</button>
+    </aside>
+
+    <section class="player-area">
+      <form id="top-search-form" class="top-search-bar" autocomplete="off">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="top-search-input" type="text" placeholder="Search for another video..." />
+      </form>
+
+      <p class="breadcrumb" id="breadcrumb"></p>
+
+      <div class="player-wrap">
+        <span class="player-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          duck player · no tracking
+        </span>
+        <iframe id="player" class="player-frame" src="" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-title-row">
+        <div>
+          <h1 class="video-title" id="video-title"></h1>
+          <p class="video-meta" id="video-meta"></p>
+        </div>
+        <button id="add-folder-btn" class="add-folder-btn" style="display:none">+ Add to folder</button>
+      </div>
+
+      <div id="thumb-strip-wrap" style="display:none">
+        <p class="strip-title">More from this folder</p>
+        <div class="thumb-strip" id="thumb-strip"></div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="description">Description</button>
+        <button class="tab" data-tab="comments">Comments</button>
+        <button class="tab" data-tab="transcript" disabled title="Coming soon">Transcript</button>
+      </div>
+      <div id="tab-description" class="tab-panel muted"></div>
+      <div id="tab-comments" class="tab-panel" style="display:none"></div>
+    </section>
+
+    <aside class="notes-panel">
+      <div class="notes-panel-header">
+        <h3>Shared notes — this folder</h3>
+        <span class="save-indicator" id="save-indicator"><span class="dot"></span><span id="save-label">idle</span></span>
+      </div>
+
+      <p class="folder-video-count" id="folder-video-count"></p>
+      <ul id="video-list"></ul>
+
+      <button id="clip-btn" class="clip-btn">+ Clip current timestamp</button>
+      <textarea id="note-body" placeholder="Notes for this whole folder..."></textarea>
+    </aside>
+  </div>
+
+  <div class="modal-overlay" id="folder-modal-overlay" style="display:none">
+    <div class="modal">
+      <h3 id="folder-modal-title">Add to folder</h3>
+      <input type="text" id="folder-modal-input" placeholder="Folder name" autocomplete="off" />
+      <div class="modal-existing" id="folder-modal-existing"></div>
+      <div class="modal-actions">
+        <button id="folder-modal-cancel" class="modal-btn modal-btn-secondary">Cancel</button>
+        <button id="folder-modal-confirm" class="modal-btn modal-btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="util.js"></script>
+  <script src="research.js"></script>
+</body>
+</html>

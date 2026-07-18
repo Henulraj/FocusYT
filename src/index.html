@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>FocusYT</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="home">
+    <header class="home-header">
+      <h1>FocusYT</h1>
+      <p class="tagline">One video at a time. No feed, no rabbit hole.</p>
+    </header>
+
+    <form id="search-form" class="search-bar search-bar-hero" autocomplete="off">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input id="search-input" type="text" placeholder="Search anything — becomes a new folder if it's new" />
+      <span class="kbd-hint">/</span>
+    </form>
+
+    <section class="folders" id="folders-section">
+      <h2>Recent folders</h2>
+      <ul id="folder-list" class="folder-list"></ul>
+    </section>
+  </main>
+
+  <script src="util.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

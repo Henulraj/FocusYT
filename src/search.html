@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Search — FocusYT</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="search-results">
+    <div class="search-top">
+      <a href="index.html" class="back-link">&larr; Home</a>
+      <form id="search-form" class="search-bar" style="width:100%;max-width:560px" autocomplete="off">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="search-input" type="text" />
+        <span class="kbd-hint">&crarr;</span>
+      </form>
+    </div>
+    <p class="results-count" id="results-count"></p>
+    <div id="results-list" class="results-grid"></div>
+  </main>
+  <script src="util.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>
