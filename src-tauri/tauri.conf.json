@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "FocusYT",
+  "version": "0.1.0",
+  "identifier": "com.focusyt.app",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "FocusYT",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; frame-src https://www.youtube-nocookie.com; img-src 'self' https://i.ytimg.com https://yt3.ggpht.com data:; style-src 'self' 'unsafe-inline'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["dmg", "msi", "nsis"],
+    "icon": ["icons/icon.png"],
+    "externalBin": ["binaries/yt-dlp"]
+  }
+}

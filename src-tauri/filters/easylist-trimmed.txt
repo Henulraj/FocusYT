@@ -1,0 +1,13 @@
+! Trimmed domain-block rules for YouTube ad requests.
+! Format matches EasyList's ||domain^ syntax so ad_block.rs can parse it.
+! This is a starting set, not exhaustive — swap in the full EasyList
+! (https://easylist.to) domain rules for better coverage.
+||doubleclick.net^
+||googlesyndication.com^
+||googleadservices.com^
+||google-analytics.com^
+||googletagmanager.com^
+||googletagservices.com^
+||ad.youtube.com^
+||static.ads-twitter.com^
+||adservice.google.com^
